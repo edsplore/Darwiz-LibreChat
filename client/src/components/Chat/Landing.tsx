@@ -51,7 +51,7 @@ export default function Landing({ Header }: { Header?: ReactNode }) {
           <div className="absolute left-0 right-0">{Header && Header}</div>
           <div className="flex h-full flex-col items-center justify-center">
             <div className="relative mb-3 h-[72px] w-[72px]">
-              <div className={className}>
+              {/* <div className={className}>
                 {endpoint &&
                   Icon &&
                   Icon({
@@ -71,7 +71,7 @@ export default function Landing({ Header }: { Header?: ReactNode }) {
               </TooltipTrigger>
               <TooltipContent side="top" sideOffset={115} className="left-[20%]">
                 {localize('com_ui_happy_birthday')}
-              </TooltipContent>
+              </TooltipContent> */}
             </div>
             {assistantName ? (
               <div className="flex flex-col items-center gap-0 p-2">
