@@ -363,7 +363,7 @@ describe('AppService updating app.locals and issuing warnings', () => {
     const mockConfig = {
       endpoints: {
         assistants: {
-          disableBuilder: false,
+          disableBuilder: true,
           pollIntervalMs: 3000,
           timeoutMs: 20000,
           supportedIds: ['id1', 'id2'],
