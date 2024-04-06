@@ -15,6 +15,8 @@ export { default as AttachmentIcon } from './AttachmentIcon';
 export { default as MessagesSquared } from './MessagesSquared';
 export { default as StopGeneratingIcon } from './StopGeneratingIcon';
 export { default as RegenerateIcon } from './RegenerateIcon';
+export { default as ThumbsDownIcon } from './ThumbsDownIcon';
+export { default as ThumbsDownClickedIcon } from './ThumbsDownClickedIcon';
 export { default as ContinueIcon } from './ContinueIcon';
 export { default as GoogleIcon } from './GoogleIcon';
 export { default as FacebookIcon } from './FacebookIcon';
