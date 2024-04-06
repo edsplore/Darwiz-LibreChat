@@ -110,7 +110,7 @@ export default function HoverButtons({
       type="button"
       title={localize('com_ui_thumbs_down')}
     >
-      {ThumbsDownClicked ? <ThumbsDownClickedIcon /> : <ThumbsDownIcon className="h-4 w-4 hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400" />}  */
+      {ThumbsDownClicked ? <ThumbsDownClickedIcon /> : <ThumbsDownIcon className="h-4 w-4 hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400" />} 
       
     </button>    
     
