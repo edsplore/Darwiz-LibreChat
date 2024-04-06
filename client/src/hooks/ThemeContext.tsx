@@ -13,11 +13,12 @@ const getInitialTheme = () => {
     const userMedia = window.matchMedia('(prefers-color-scheme: dark)');
     if (userMedia.matches) {
       return 'dark';
-    }
+    } //This is not used because we only need the dark theme; Replace dark with light in case we need a light theme as well.
   }
 
-  return 'light'; // light theme as the default;
+  return 'dark'; // Set dark theme as the default
 };
+
 
 type ProviderValue = {
   theme: string;
