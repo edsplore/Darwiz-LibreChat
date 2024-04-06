@@ -117,18 +117,18 @@ export default function HoverButtons({
       ) : null}
 
         <button
-      className="hover-button rounded-md p-1 hover:bg-gray-200 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400 md:invisible md:group-hover:visible"
-       onClick={() => {
-    // Inline click handling logic
-     ThumbsDownClicked = true; // This variable is set to true on click
-     console.log('Thumbs Down Clicked:', ThumbsDownClicked);
-  }}
-      type="button"
-      title={localize('com_ui_thumbs_down')}
-    >
-      {ThumbsDownClicked ? <ThumbsDownClickedIcon /> : <ThumbsDownIcon className="h-4 w-4 hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400" />}  */
-      
-    </button>  
+          className="hover-button rounded-md p-1 hover:bg-gray-200 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400 md:invisible md:group-hover:visible"
+          onClick={() => {
+            // Inline click handling logic
+            ThumbsDownClicked = useState(false); // This variable is set to true on click
+            console.log('Thumbs Down Clicked:', ThumbsDownClicked);
+          }}
+          type="button"
+          title={localize('com_ui_thumbs_down')}
+        >
+          {ThumbsDownClicked ? <ThumbsDownClickedIcon /> : <ThumbsDownIcon className="h-4 w-4 hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400" />}
+          
+        </button>  
 
     </div>
   );
