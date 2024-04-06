@@ -224,9 +224,38 @@ const Registration: React.FC = () => {
           {renderInput('confirm_password', 'com_auth_password_confirm', 'password', {
             validate: (value) => value === password || localize('com_auth_password_not_match'),
           })}
+
+ {/* Privacy Policy Agreement Checkbox - START */}
+ <div className="mt-4">
+            <label className="flex items-start">
+              <input
+                type="checkbox"
+                className="mt-1 h-4 w-4 accent-green-500"
+                {...register('privacyPolicyAgreed', {
+                  required: 'You must agree to the privacy policy to continue.',
+                })}
+                aria-invalid={!!errors.privacyPolicyAgreed}
+              />
+              <span className="ml-2 text-sm text-gray-600 dark:text-gray-200">
+                I agree to the <a href="https://eureko.ai/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:underline">Privacy Policy</a>.
+              </span>
+            </label>
+            {errors.privacyPolicyAgreed && (
+              <p role="alert" className="mt-1 text-sm text-red-500">
+                {errors.privacyPolicyAgreed.message}
+              </p>
+            )}
+          </div>
+          {/* Privacy Policy Agreement Checkbox - END */}
+
+
+
+
+
+
           <div className="mt-6">
             <button
-              disabled={Object.keys(errors).length > 0}
+              disabled={Object.keys(errors).length > 0 || !watch('privacyPolicyAgreed')}
               type="submit"
               aria-label="Submit registration"
               className="w-full transform rounded-md bg-green-500 px-4 py-3 tracking-wide text-white transition-colors duration-200 hover:bg-green-550 focus:bg-green-550 focus:outline-none disabled:cursor-not-allowed disabled:hover:bg-green-500"
