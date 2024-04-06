@@ -23,7 +23,7 @@ export default function HoverButtons({
   isSubmitting,
   message,
   regenerate,
-  handleContinue,
+  handleContinue
 }: THoverButtons) {
   const localize = useLocalize();
   const { endpoint } = conversation ?? {};
@@ -110,8 +110,8 @@ export default function HoverButtons({
       type="button"
       title={localize('com_ui_thumbs_down')}
     >
-      {/* {ThumbsDownClicked ? <ThumbsDownClickedIcon /> : <ThumbsDownIcon className="h-4 w-4 hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400" />}  */}
-      <ThumbsDownIcon />
+      {ThumbsDownClicked ? <ThumbsDownClickedIcon /> : <ThumbsDownIcon className="h-4 w-4 hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400" />}  */
+      
     </button>    
     
     </div>
