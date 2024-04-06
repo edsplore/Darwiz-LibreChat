@@ -225,12 +225,12 @@ const Registration: React.FC = () => {
             validate: (value) => value === password || localize('com_auth_password_not_match'),
           })}
 
- {/* Privacy Policy Agreement Checkbox - START */}
- <div className="mt-4">
-            <label className="flex items-start">
+          {/* Privacy Policy Agreement Checkbox - START */}
+          <div className="mt-4">
+            <label className="flex items-center"> {/* Changed items-start to items-center for vertical alignment */}
               <input
                 type="checkbox"
-                className="mt-1 h-4 w-4 accent-green-500"
+                className="mt-0 h-4 w-4 accent-green-500" /* Removed mt-1 to adjust alignment */
                 {...register('privacyPolicyAgreed', {
                   required: 'You must agree to the privacy policy to continue.',
                 })}
@@ -247,10 +247,6 @@ const Registration: React.FC = () => {
             )}
           </div>
           {/* Privacy Policy Agreement Checkbox - END */}
-
-
-
-
 
 
           <div className="mt-6">
