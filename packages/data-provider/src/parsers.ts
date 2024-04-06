@@ -208,7 +208,7 @@ export const getResponseSender = (endpointOption: TEndpointOption): string => {
     if (chatGptLabel) {
       return chatGptLabel;
     } else if (model && model.includes('gpt-3')) {
-      return 'GPT-3.5';
+      return 'Eureko';
     } else if (model && model.includes('gpt-4')) {
       return 'GPT-4';
     } else if (model && model.includes('mistral')) {
@@ -245,7 +245,7 @@ export const getResponseSender = (endpointOption: TEndpointOption): string => {
     } else if (model && model.includes('mistral')) {
       return 'Mistral';
     } else if (model && model.includes('gpt-3')) {
-      return 'GPT-3.5';
+      return 'Eureko';
     } else if (model && model.includes('gpt-4')) {
       return 'GPT-4';
     } else if (modelDisplayLabel) {

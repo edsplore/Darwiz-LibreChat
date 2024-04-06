@@ -8,7 +8,7 @@ const getInitialTheme = () => {
     const storedPrefs = window.localStorage.getItem('color-theme');
     if (typeof storedPrefs === 'string') {
       return storedPrefs;
-    }
+    } 
 
     const userMedia = window.matchMedia('(prefers-color-scheme: dark)');
     if (userMedia.matches) {
