@@ -361,7 +361,7 @@ export default {
   com_endpoint_config_key_google_vertex_api_role:
     'Make sure to click \'Create and Continue\' to give at least the \'Vertex AI User\' role. Lastly, create a JSON key to import here.',
   com_nav_welcome_assistant: 'Please Select an Assistant',
-  com_nav_welcome_message: "Hi, I'm Eureko. How can I assist you today?",
+  com_nav_welcome_message: "Made with ❤️ in Italy",
   com_nav_auto_scroll: 'Auto-scroll to Newest on Open',
   com_nav_hide_panel: 'Hide Right-most Side Panel',
   com_nav_modular_chat: 'Enable switching Endpoints mid-conversation',
