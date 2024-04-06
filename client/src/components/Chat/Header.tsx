@@ -10,8 +10,8 @@ export default function Header() {
       <div className="hide-scrollbar flex items-center gap-2 overflow-x-auto">
         {!navVisible && <HeaderNewChat />}
         <EndpointsMenu />
-         {/* <HeaderOptions /> */}
-       <PresetsMenu /> 
+        <HeaderOptions />
+       {/* <PresetsMenu />  */}
       </div>
       {/* Empty div for spacing */}
       <div />

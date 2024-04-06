@@ -55,7 +55,7 @@ export default function Landing({ Header }: { Header?: ReactNode }) {
                 {endpoint &&
                   Icon &&
                   Icon({
-                    size: 41,
+                    size: 150,
                     context: 'landing',
                     className: 'h-2/3 w-2/3',
                     endpoint: endpoint,
