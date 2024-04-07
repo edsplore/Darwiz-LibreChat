@@ -20,9 +20,9 @@ export default function GPTIcon({
       // xmlns="http://www.w3.org/2000/svg"
       // strokeWidth="1.5"
       // className={cn(className, '')}
-      width={`${width}px`} // Updated to set width in pixels
-      height={`${height}px`} // Updated to set height in pixels
-      viewBox="0 0 3192 3192" // Updated viewBox to match new SVG
+      width={`24px`} // Updated to set width in pixels
+      height={`24px`} // Updated to set height in pixels
+      viewBox="0 0 24 24" // Updated viewBox to match new SVG
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
