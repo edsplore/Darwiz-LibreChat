@@ -34,7 +34,6 @@ export default function HoverButtons({
   const { endpoint: _endpoint, endpointType } = conversation ?? {};
   const endpoint = endpointType ?? _endpoint;
   const [isCopied, setIsCopied] = useState(false);
-  let ThumbsDownClicked = useState(false); 
   const { hideEditButton, regenerateEnabled, continueSupported } = useGenerationsByLatest({
     isEditing,
     isSubmitting,
@@ -55,7 +54,14 @@ export default function HoverButtons({
     enterEdit();
   };
 
-  
+  // Correctly using useState to manage the ThumbsDownClicked state
+  const [ThumbsDownClicked, setThumbsDownClicked] = useState(false);
+
+  // Function to handle the click event on the thumbs down button
+  const handleThumbsDownClick = () => {
+    setThumbsDownClicked(!ThumbsDownClicked); // Toggle the ThumbsDownClicked state
+    console.log('Thumbs Down Clicked:', !ThumbsDownClicked);
+  };
 
   return (
     <div className="visible mt-0 flex justify-center gap-1 self-end text-gray-400 lg:justify-start">
@@ -138,16 +144,19 @@ export default function HoverButtons({
             isSubmitting && isCreatedByUser ? 'md:opacity-0 md:group-hover:opacity-100' : '',
             !isLast ? 'md:opacity-0 md:group-hover:opacity-100' : '',
           )}
-            onClick={() => {
-              // Inline click handling logic
-              ThumbsDownClicked = useState(true); // This variable is set to true on click
-              console.log('Thumbs Down Clicked:', ThumbsDownClicked);
-            }}
+            // onClick={() => {
+            //   // Inline click handling logic
+            //   ThumbsDownClicked = useState(true); // This variable is set to true on click
+            //   console.log('Thumbs Down Clicked:', ThumbsDownClicked);
+            // }}
             // onClick={() => copyToClipboard(setIsCopied)}
+
+            onClick={handleThumbsDownClick}
+
             type="button"
             title={localize('com_ui_thumbs_down')}
         >
-          {ThumbsDownClicked ? <ThumbsDownClickedIcon /> : <ThumbsDownIcon />}
+          {ThumbsDownClicked ? <ThumbsDownClickedIcon className="h-4 w-4" /> : <ThumbsDownIcon className="h-4 w-4" />}
         </button>
       ) : null}
 
