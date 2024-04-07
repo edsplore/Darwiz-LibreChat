@@ -96,13 +96,13 @@ export default function Plugins({
           )}
         />
       </Button>
-      <Menu
+      {/* <Menu
         value={conversation.model ?? ''}
         setValue={setOption('model')}
         availableValues={models}
         showAbove={showAbove}
         className={cn(cardStyle, 'z-40 flex w-64 min-w-60 sm:w-48', visible ? '' : 'hidden')}
-      />
+      /> */}
       <MultiSelectDropDown
         value={conversation.tools || []}
         isSelected={checkPluginSelection}
