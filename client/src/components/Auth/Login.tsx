@@ -124,7 +124,7 @@ function Login() {
       <div className="mt-6 w-authPageWidth overflow-hidden bg-white px-6 py-4 dark:bg-gray-900 sm:max-w-md sm:rounded-lg">
         {/* Image addition starts here */}
           <div className="text-center"> {/* Center the image container */}
-            <img src="/assets/favicon-32x32.png" style="max-width:50%" alt="Favicon" className="mx-auto mb-4 h-auto" />
+          <img src="/assets/favicon-32x32.png" style={{ maxWidth: '50%' }} alt="Favicon" className="mx-auto mb-4 h-auto" />
           </div>
         {/* Image addition ends here */}
         <h1
