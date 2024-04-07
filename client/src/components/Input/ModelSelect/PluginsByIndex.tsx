@@ -106,13 +106,13 @@ export default function PluginsByIndex({
       </Button>
       {visible && (
         <>
-          <Menu
+          {/* <Menu
             value={conversation.model ?? ''}
             setValue={setOption('model')}
             availableValues={models}
             showAbove={showAbove}
             showLabel={false}
-          />
+          /> */}
           <PluginsMenu
             value={conversation.tools || []}
             isSelected={checkPluginSelection}
