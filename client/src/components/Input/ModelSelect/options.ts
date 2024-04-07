@@ -21,14 +21,14 @@ export const options: { [key: string]: FC<TModelSelectProps> } = {
   [EModelEndpoint.chatGPTBrowser]: ChatGPT,
 };
 
-// export const multiChatOptions = {
-//   ...options,
-//   [EModelEndpoint.gptPlugins]: PluginsByIndex,
-// };
-
-// To rename gpt models
-import EurekoLLM from './EurekoLLM'; // Make sure the path is correct
-
 export const multiChatOptions = {
-  "Eureko-LLM": EurekoLLM, // Using a placeholder key here; you can replace it with an appropriate key if needed
+  ...options,
+  [EModelEndpoint.gptPlugins]: PluginsByIndex,
 };
+
+// // To rename gpt models
+// import EurekoLLM from './EurekoLLM'; // Make sure the path is correct
+
+// export const multiChatOptions = {
+//   "Eureko-LLM": EurekoLLM, // Using a placeholder key here; you can replace it with an appropriate key if needed
+// };
