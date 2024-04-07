@@ -73,7 +73,7 @@ export default function HeaderOptions() {
               <ModelSelect
                 conversation={conversation}
                 setOption={setOption} 
-                isMultiChat={false} //should be true 
+                isMultiChat={true} 
                 showAbove={false}
               />
               {/* {!noSettings[endpoint] && (
