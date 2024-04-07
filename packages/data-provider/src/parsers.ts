@@ -210,11 +210,12 @@ export const getResponseSender = (endpointOption: TEndpointOption): string => {
     } else if (model && model.includes('gpt-3')) {
       return 'Eureko';
     } else if (model && model.includes('gpt-4')) {
-      return 'GPT-4';
+      return 'Eureko';
     } else if (model && model.includes('mistral')) {
-      return 'Mistral';
+      return 'Eureko';
     }
-    return alternateName[endpoint] ?? 'ChatGPT';
+    // return alternateName[endpoint] ?? 'ChatGPT';
+    return alternateName[endpoint] ?? 'Eureko';
   }
 
   if (endpoint === EModelEndpoint.bingAI) {
@@ -229,9 +230,9 @@ export const getResponseSender = (endpointOption: TEndpointOption): string => {
     if (modelLabel) {
       return modelLabel;
     } else if (model && model.includes('gemini')) {
-      return 'Gemini';
+      return 'Eureko';
     } else if (model && model.includes('code')) {
-      return 'Codey';
+      return 'Eureko';
     }
 
     return 'PaLM2';
