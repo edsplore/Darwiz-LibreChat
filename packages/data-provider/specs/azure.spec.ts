@@ -492,7 +492,7 @@ describe('validateAzureGroups with modelGroupMap and groupMap', () => {
         version: '2023-12-01-preview',
         models: {
           'gpt-4-vision-preview': {
-            deploymentName: 'Eureko LLM',
+            deploymentName: 'gpt-4-vision-preview',
             version: '2024-02-15-preview',
           },
           'gpt-3.5-turbo': {
@@ -541,7 +541,7 @@ describe('validateAzureGroups with modelGroupMap and groupMap', () => {
         version: '2023-12-01-preview',
         models: {
           'gpt-4-vision-preview': {
-            deploymentName: 'Eureko LLM',
+            deploymentName: 'gpt-4-vision-preview',
             version: '2024-02-15-preview',
           },
           'gpt-3.5-turbo': {
@@ -596,7 +596,7 @@ describe('validateAzureGroups with modelGroupMap and groupMap', () => {
     const { isValid, modelGroupMap, groupMap, modelNames } = validateAzureGroups(validConfigs);
     expect(isValid).toBe(true);
     expect(modelNames).toEqual([
-      'Eureko LLM',
+      'gpt-4-vision-preview',
       'gpt-3.5-turbo',
       'gpt-3.5-turbo-1106',
       'gpt-4',
@@ -671,14 +671,14 @@ describe('validateAzureGroups with modelGroupMap and groupMap', () => {
     );
 
     const { azureOptions: azureOptions1 } = mapModelToAzureConfig({
-      modelName: 'Eureko LLM',
+      modelName: 'gpt-4-vision-preview',
       modelGroupMap,
       groupMap,
     });
     expect(azureOptions1).toEqual({
       azureOpenAIApiKey: 'westus-key',
       azureOpenAIApiInstanceName: 'librechat-westus',
-      azureOpenAIApiDeploymentName: 'Eureko LLM',
+      azureOpenAIApiDeploymentName: 'gpt-4-vision-preview',
       azureOpenAIApiVersion: '2024-02-15-preview',
     });
 
