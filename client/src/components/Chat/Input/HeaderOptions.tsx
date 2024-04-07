@@ -72,7 +72,7 @@ export default function HeaderOptions() {
             <div className="z-[61] flex w-full items-center justify-center gap-2">
               <ModelSelect
                 conversation={conversation}
-                setOption={null} //should be setOption
+                setOption={setOption} 
                 isMultiChat={false} //should be true 
                 showAbove={false}
               />
