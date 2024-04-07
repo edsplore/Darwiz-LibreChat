@@ -76,7 +76,7 @@ export default function HeaderOptions() {
                 isMultiChat={true}
                 showAbove={false}
               />
-              {/* {!noSettings[endpoint] && (
+              {!noSettings[endpoint] && (
                 <Button
                   type="button"
                   className={cn(
@@ -88,7 +88,7 @@ export default function HeaderOptions() {
                 >
                   <Settings2 className="w-4 text-gray-600 dark:text-white" />
                 </Button>
-              )} */}
+              )}
             </div>
             {/* <OptionsPopover
               visible={showPopover}
