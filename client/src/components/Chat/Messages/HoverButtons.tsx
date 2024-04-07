@@ -34,6 +34,7 @@ export default function HoverButtons({
   const { endpoint: _endpoint, endpointType } = conversation ?? {};
   const endpoint = endpointType ?? _endpoint;
   const [isCopied, setIsCopied] = useState(false);
+  let ThumbsDownClicked = useState(false); 
   const { hideEditButton, regenerateEnabled, continueSupported } = useGenerationsByLatest({
     isEditing,
     isSubmitting,
@@ -54,7 +55,7 @@ export default function HoverButtons({
     enterEdit();
   };
 
-  let ThumbsDownClicked = false; 
+  
 
   return (
     <div className="visible mt-0 flex justify-center gap-1 self-end text-gray-400 lg:justify-start">
@@ -137,13 +138,16 @@ export default function HoverButtons({
             isSubmitting && isCreatedByUser ? 'md:opacity-0 md:group-hover:opacity-100' : '',
             !isLast ? 'md:opacity-0 md:group-hover:opacity-100' : '',
           )}
-            onClick={() => copyToClipboard(setIsCopied)}
+            onClick={() => {
+              // Inline click handling logic
+              ThumbsDownClicked = useState(true); // This variable is set to true on click
+              console.log('Thumbs Down Clicked:', ThumbsDownClicked);
+            }}
+            // onClick={() => copyToClipboard(setIsCopied)}
             type="button"
-            title={
-              isCopied ? localize('com_ui_thumbs_down') : localize('com_ui_thumbs_down')
-            }
+            title={localize('com_ui_thumbs_down')}
         >
-          {isCopied ? <ThumbsDownClickedIcon /> : <ThumbsDownIcon />}
+          {ThumbsDownClicked ? <ThumbsDownClickedIcon /> : <ThumbsDownIcon />}
         </button>
       ) : null}
 
