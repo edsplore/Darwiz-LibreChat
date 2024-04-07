@@ -289,12 +289,14 @@ select {
   transition: all 0.2s ease-in-out;
   transform: scaleY(0);
   transform-origin: bottom center;
+  display: none;
 }
 
 .endpointOptionsPopover-container.show {
   pointer-events: fill;
   opacity: 1;
-  transform: scaleY(1)
+  transform: scaleY(1);
+  display: none;
 }
 
 .creative-tab {
