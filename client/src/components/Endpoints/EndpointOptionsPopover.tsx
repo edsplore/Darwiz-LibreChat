@@ -30,7 +30,7 @@ export default function EndpointOptionsPopover({
 
   return (
     <>
-      <div
+      {/* <div
         className={cn(
           'endpointOptionsPopover-container absolute bottom-[-10px] z-0 flex w-full flex-col items-center md:px-4',
           visible ? ' show' : '',
@@ -65,7 +65,7 @@ export default function EndpointOptionsPopover({
           </div>
           <div>{children}</div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

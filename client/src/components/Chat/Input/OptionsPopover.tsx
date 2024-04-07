@@ -51,7 +51,7 @@ export default function OptionsPopover({
 
   return (
     <Portal>
-      <Content sideOffset={8} align="start" ref={popoverRef} asChild>
+      {/* <Content sideOffset={8} align="start" ref={popoverRef} asChild>
         <div className="z-[70] flex w-screen flex-col items-center md:w-full md:px-4">
           <div
             className={cn(
@@ -84,7 +84,7 @@ export default function OptionsPopover({
             <div>{children}</div>
           </div>
         </div>
-      </Content>
+      </Content> */}
     </Portal>
   );
 }

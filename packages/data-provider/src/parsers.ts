@@ -244,11 +244,11 @@ export const getResponseSender = (endpointOption: TEndpointOption): string => {
     } else if (chatGptLabel) {
       return chatGptLabel;
     } else if (model && model.includes('mistral')) {
-      return 'Mistral';
+      return 'Eureko';
     } else if (model && model.includes('gpt-3')) {
       return 'Eureko';
     } else if (model && model.includes('gpt-4')) {
-      return 'GPT-4';
+      return 'Eureko';
     } else if (modelDisplayLabel) {
       return modelDisplayLabel;
     }

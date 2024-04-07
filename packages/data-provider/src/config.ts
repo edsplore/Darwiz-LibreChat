@@ -317,7 +317,7 @@ export const defaultModels = {
     'gpt-4-1106-preview',
     'gpt-3.5-turbo',
     'gpt-3.5-turbo-1106',
-    'Eureko LLM',
+    'gpt-4-vision-preview',
     'gpt-4',
     'gpt-3.5-turbo-instruct-0914',
     'gpt-3.5-turbo-0613',
