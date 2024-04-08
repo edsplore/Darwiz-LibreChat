@@ -113,6 +113,7 @@ export default {
   com_ui_regenerate: 'Regenerate',
   com_ui_continue: 'Continue',
   com_ui_thumbs_down : 'Bad response',
+  com_ui_thumbs_up : 'Good response',
   com_ui_edit: 'Edit',
   com_ui_success: 'Success',
   com_ui_all: 'all',

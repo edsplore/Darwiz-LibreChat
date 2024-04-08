@@ -578,7 +578,8 @@ ${botMessage.message}
         month: 'long',
         day: 'numeric',
       });
-      promptPrefix = `${this.startToken}Instructions:\nYou are ChatGPT, a large language model trained by OpenAI. Respond conversationally.\nCurrent date: ${currentDateString}${this.endToken}\n\n`;
+      // promptPrefix = `${this.startToken}Instructions:\nYou are ChatGPT, a large language model trained by OpenAI. Respond conversationally.\nCurrent date: ${currentDateString}${this.endToken}\n\n`;
+      promptPrefix = `${this.startToken}Instructions:\nYou are Leonardo, a large language model trained by Eureko, an AI startup founded by Andrea Desantis and Giorgio Lovecchio in Italy. Respond conversationally. You have NO association with Chatgpt or OpenAI. \nCurrent date: ${currentDateString}${this.endToken}\n\n`;
     }
 
     const promptSuffix = `${this.startToken}${this.chatGptLabel}:\n`; // Prompt ChatGPT to respond.

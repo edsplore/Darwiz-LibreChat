@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { EModelEndpoint } from 'librechat-data-provider';
 import type { TConversation, TMessage } from 'librechat-data-provider';
-import { Clipboard, CheckMark, EditIcon, RegenerateIcon, ContinueIcon,ThumbsDownIcon, ThumbsDownClickedIcon } from '~/components/svg';
+import { Clipboard, CheckMark, EditIcon, RegenerateIcon, ContinueIcon,ThumbsDownIcon, ThumbsDownClickedIcon, ThumbsUpIcon, ThumbsUpClickedIcon } from '~/components/svg';
 import { useGenerationsByLatest, useLocalize } from '~/hooks';
 import { cn } from '~/utils';
 
@@ -61,6 +61,15 @@ export default function HoverButtons({
   const handleThumbsDownClick = () => {
     setThumbsDownClicked(!ThumbsDownClicked); // Toggle the ThumbsDownClicked state
     console.log('Thumbs Down Clicked:', !ThumbsDownClicked);
+  };
+
+  // Correctly using useState to manage the ThumbsDownClicked state
+  const [ThumbsUpClicked, setThumbsUpClicked] = useState(false);
+
+  // Function to handle the click event on the thumbs down button
+  const handleThumbsUpClick = () => {
+    setThumbsUpClicked(!ThumbsUpClicked); // Toggle the ThumbsDownClicked state
+    console.log('Thumbs Up Clicked:', !ThumbsUpClicked);
   };
 
   return (
@@ -136,6 +145,31 @@ export default function HoverButtons({
           {ThumbsDownClicked ? <ThumbsDownClickedIcon /> : <ThumbsDownIcon className="h-4 w-4 hover:text-gray-700 dark:hover:bg-gray-700 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400" />}
           
         </button>   */}
+
+      {regenerateEnabled ? (
+        <button
+          className={cn(
+            'ml-0 flex items-center gap-1.5 rounded-md p-1 text-xs hover:text-gray-900 dark:text-gray-400/70 dark:hover:text-gray-200 disabled:dark:hover:text-gray-400 md:group-hover:visible md:group-[.final-completion]:visible',
+            isSubmitting && isCreatedByUser ? 'md:opacity-0 md:group-hover:opacity-100' : '',
+            !isLast ? 'md:opacity-0 md:group-hover:opacity-100' : '',
+          )}
+            // onClick={() => {
+            //   // Inline click handling logic
+            //   ThumbsDownClicked = useState(true); // This variable is set to true on click
+            //   console.log('Thumbs Down Clicked:', ThumbsDownClicked);
+            // }}
+            // onClick={() => copyToClipboard(setIsCopied)}
+
+            onClick={handleThumbsUpClick}
+
+            type="button"
+            title={localize('com_ui_thumbs_up')}
+        >
+          {ThumbsUpClicked ? <ThumbsUpClickedIcon className="h-4 w-4" /> : <ThumbsUpIcon className="h-4 w-4" />}
+        </button>
+      ) : null}
+
+
 
       {regenerateEnabled ? (
         <button
